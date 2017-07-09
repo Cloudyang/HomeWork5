@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\VegetableFactory.cs" />
+    <Compile Include="Factory\FishFactory.cs" />
+    <Compile Include="Factory\TomatoScrambledEggsFactory.cs" />
     <Compile Include="FoodSimpleFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

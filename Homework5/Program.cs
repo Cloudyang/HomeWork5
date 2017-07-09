@@ -47,6 +47,24 @@ namespace Homework5
             }
             #endregion
 
+            #region 用工厂方法实现客人点菜，而不是让客人自己做菜
+            Console.WriteLine("++++++++++++++++++++用工厂方法实现客人点菜，而不是让客人自己做++++++++++++++++++++++++++++++++++++++++++");
+            {
+                var tomatoScrambledEggsFactory = new SecondModel.Factory.TomatoScrambledEggsFactory();
+                var tomatoegg = tomatoScrambledEggsFactory.CreateFoodFactory();
+                tomatoegg.Show();
+
+                var fishFactory = new SecondModel.Factory.FishFactory();
+                var fish = fishFactory.CreateFoodFactory();
+                fish.Show();
+
+                var vegatableFactory = new SecondModel.Factory.VegetableFactory();
+                var vegatable = vegatableFactory.CreateFoodFactory();
+                vegatable.Show();
+
+            }
+            #endregion
+
             Console.ReadKey();
         }
     }
