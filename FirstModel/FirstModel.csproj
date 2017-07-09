@@ -43,7 +43,7 @@
     <Compile Include="Person.cs" />
     <Compile Include="Vegetable.cs" />
     <Compile Include="Fish.cs" />
-    <Compile Include="TomatoEgg.cs" />
+    <Compile Include="TomatoScrambledEggs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

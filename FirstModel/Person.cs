@@ -12,17 +12,17 @@ namespace FirstModel
         /// <summary>
         /// 模拟想吃的所有菜
         /// </summary>
-        private List<AbstractDish> Foods { get; set; }
+        private List<AbstractFood> Foods { get; set; }
 
         public Person()
         {
-            Foods = new List<AbstractDish>();
+            Foods = new List<AbstractFood>();
         }
 
         /// <summary>
         /// 用于模拟炒菜
         /// </summary>
-        public void Fried(AbstractDish food)
+        public void Cook(AbstractFood food)
         {
             Foods.Add(food);
         }

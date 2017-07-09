@@ -10,9 +10,9 @@ namespace FirstModel
     /// <summary>
     /// 番茄炒蛋
     /// </summary>
-    public class TomatoEgg : AbstractDish
+    public class TomatoScrambledEggs : AbstractFood
     {
-        public TomatoEgg() : base("番茄炒蛋") { }
+        public TomatoScrambledEggs() : base("番茄炒蛋") { }
 
         public override void Show()
         {
