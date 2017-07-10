@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="First\AbstractDish.cs" />
+    <Compile Include="AbstractFactory\AbstractMeal.cs" />
+    <Compile Include="AbstractFactory\AbstractRice.cs" />
+    <Compile Include="AbstractFactory\AbstractSoup.cs" />
+    <Compile Include="First\AbstractFood.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Second\ICreator.cs" />
   </ItemGroup>

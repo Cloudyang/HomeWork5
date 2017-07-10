@@ -47,7 +47,7 @@ namespace Homework5
             }
             #endregion
 
-            #region 用工厂方法实现客人点菜，而不是让客人自己做菜
+            #region 3  用工厂方法实现客人点菜，而不是让客人自己做菜
             Console.WriteLine("++++++++++++++++++++用工厂方法实现客人点菜，而不是让客人自己做++++++++++++++++++++++++++++++++++++++++++");
             {
                 var tomatoScrambledEggsFactory = new SecondModel.Factory.TomatoScrambledEggsFactory();
@@ -65,6 +65,13 @@ namespace Homework5
             }
             #endregion
 
+            #region 4  用抽象工厂，每个工厂都能做三个菜、一个汤、一个主食
+            Console.WriteLine("++++++++++++++++++++用抽象工厂，每个工厂都能做三个菜、一个汤、一个主食++++++++++++++++++++++++++++++++++");
+            {
+                var meal = new ThirdModel.Meal();
+                meal.Show();
+            }
+            #endregion
             Console.ReadKey();
         }
     }
