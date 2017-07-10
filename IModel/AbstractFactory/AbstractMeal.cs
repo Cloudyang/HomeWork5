@@ -9,7 +9,7 @@ namespace IModel.AbstractFactory
 {
    public abstract class AbstractMeal
     {
-        protected List<AbstractFood> Foods = new List<AbstractFood>();
+        protected List<AbstactDish> Foods = new List<AbstactDish>();
         public abstract void Show();
 
         public abstract AbstractRice CreateRice();

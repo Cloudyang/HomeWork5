@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IModel.First
 {
-    public abstract class AbstractFood
+    public abstract class AbstactDish
     {
-        public AbstractFood(string name)
+        public AbstactDish(string name)
         {
             Name = name;
         }

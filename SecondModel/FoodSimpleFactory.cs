@@ -17,21 +17,21 @@ namespace SecondModel
     }
     public class FoodSimpleFactory
     {
-        private static Dictionary<FoodType,AbstractFood> FoodDict;
+        private static Dictionary<FoodType,AbstactDish> FoodDict;
 
         /// <summary>
         /// 初始化实例
         /// </summary>
         static FoodSimpleFactory()
         {
-            FoodDict = new Dictionary<FoodType, AbstractFood>();
+            FoodDict = new Dictionary<FoodType, AbstactDish>();
 
             for (int i = 0; i < ConfigurationManager.AppSettings.Count; i++)
             {
                 var settingValues = ConfigurationManager.AppSettings.Get(i).Split(',');
                 var assembly = Assembly.Load(settingValues[0]);
                 Type type = assembly.GetType(settingValues[1]);
-                var food = Activator.CreateInstance(type) as AbstractFood;
+                var food = Activator.CreateInstance(type) as AbstactDish;
                 switch (ConfigurationManager.AppSettings.GetKey(i))
                 {
                     case "Fish":
@@ -46,7 +46,7 @@ namespace SecondModel
                 }
             }
         }
-        public static AbstractFood CreateFood(FoodType type)
+        public static AbstactDish CreateFood(FoodType type)
         {            
             return FoodDict[type];
         }

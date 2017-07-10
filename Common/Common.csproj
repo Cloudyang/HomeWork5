@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F55162FE-1A28-4CCD-BD6A-DE6D05A622FC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{FF143C46-8864-4A38-A5AE-7D3AA6BA0EBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Homework5</RootNamespace>
-    <AssemblyName>Homework5</AssemblyName>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,7 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,32 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="ObjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FirstModel\FirstModel.csproj">
-      <Project>{c855617c-7856-452c-8582-ead31fb9ca3d}</Project>
-      <Name>FirstModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IModel\IModel.csproj">
-      <Project>{870bbe08-387a-4326-8928-639bee9f588d}</Project>
-      <Name>IModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SecondModel\SecondModel.csproj">
-      <Project>{c3388973-65ca-4250-9517-c12c4d13e6c8}</Project>
-      <Name>SecondModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThirdModel\ThirdModel.csproj">
-      <Project>{85fac760-9951-4548-b688-5b542162a038}</Project>
-      <Name>ThirdModel</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DishesCFG\" />
+    <Compile Include="PubConfig.cs" />
+    <Compile Include="SectConfig.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

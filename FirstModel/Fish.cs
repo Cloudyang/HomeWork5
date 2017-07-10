@@ -10,7 +10,7 @@ namespace FirstModel
     /// <summary>
     /// 鱼
     /// </summary>
-    public class Fish : AbstractFood
+    public class Fish : AbstactDish
     {
         public Fish() : base("鱼") { }
 

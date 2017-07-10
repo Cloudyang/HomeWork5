@@ -20,9 +20,9 @@ namespace SecondModel.Factory
             type = assembly.GetType(settingValues[1]);
         }
 
-        public AbstractFood CreateFoodFactory()
+        public AbstactDish CreateFoodFactory()
         {
-            return Activator.CreateInstance(type) as AbstractFood;
+            return Activator.CreateInstance(type) as AbstactDish;
         }
     }
 }

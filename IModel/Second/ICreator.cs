@@ -9,6 +9,6 @@ namespace IModel.Second
 {
     public interface ICreator
     {
-        AbstractFood CreateFoodFactory();
+        AbstactDish CreateFoodFactory();
     }
 }

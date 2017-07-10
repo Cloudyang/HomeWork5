@@ -27,7 +27,7 @@ namespace ThirdModel
         {
             Types.ForEach(type =>
             {
-                var food = Activator.CreateInstance(type) as AbstractFood;
+                var food = Activator.CreateInstance(type) as AbstactDish;
                 Foods.Add(food);
             });
         }
