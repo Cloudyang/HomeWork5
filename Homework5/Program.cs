@@ -72,6 +72,13 @@ namespace Homework5
                 meal.Show();
             }
             #endregion
+
+            #region 5  做个点菜系统，用户输入可选菜id进行点菜：
+            Console.WriteLine("++++++++++++++++++++做个点菜系统，用户输入可选菜id进行点菜++++++++++++++++++++++++++++++++++++++++++++++");
+            {
+
+            }
+            #endregion
             Console.ReadKey();
         }
     }
