@@ -6,7 +6,7 @@ namespace Common
     {
         public static T CreateObject<T>(string assemblyName, string className) where T : class
         {
-            object objType = Assembly.Load(assemblyName).CreateInstance($"{assemblyName}.{className}", true, BindingFlags.Default, null, null, null, null);
+            object objType = Assembly.Load(assemblyName).CreateInstance(className, true, BindingFlags.Default, null, null, null, null);
             T resObject = (T)objType;
             return resObject;
         }

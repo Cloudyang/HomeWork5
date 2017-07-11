@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using IModel.First;
 using FirstModel;
 using SecondModel;
+using Common;
 
 namespace Homework5
 {
@@ -31,7 +32,7 @@ namespace Homework5
                 person.Cook(fish);
 
                 ///自己做得菜，好不好吃
-                person.Show();                
+                person.Show();
             }
             #endregion
 
@@ -74,12 +75,48 @@ namespace Homework5
             #endregion
 
             #region 5  做个点菜系统，用户输入可选菜id进行点菜：
-            Console.WriteLine("++++++++++++++++++++做个点菜系统，用户输入可选菜id进行点菜++++++++++++++++++++++++++++++++++++++++++++++");
-            {
 
+            #region 多线程演示：甲乙丙三个客人(三个线程)分别随机点5个菜，然后每个菜依次做菜、品尝、点评
+            Console.WriteLine("++++++++++++++++++++多线程演示：甲乙丙三个客人(三个线程)分别随机点5个菜，然后每个菜依次做菜、品尝、点评++");
+            {
+                List<Client> clients = new List<Client>();
+                Client client = new Client("甲");
+                clients.Add(client);
+                client = new Client("乙");
+                clients.Add(client);
+                client = new Client("丙");
+                clients.Add(client);
+
+                Parallel.ForEach(clients, c => { c.Show(); });
+
+                Client.MaxScore();
             }
             #endregion
-            Console.ReadKey();
+
+            #region 用户输入id点菜
+            Console.WriteLine("++++++++++++++++++++做个点菜系统，用户输入可选菜id进行点菜++++++++++++++++++++++++++++++++++++++++++++++");
+            {
+                OrderDishes od = new OrderDishes();
+                od.Show();
+                Console.WriteLine("按上述数字选择菜单，按e退出");
+
+                string sInKey = Console.ReadKey().KeyChar.ToString().ToLower();
+                do
+                {
+                    Console.WriteLine();
+                    try
+                    {
+                        od.OrderDish(int.Parse(sInKey));
+                    }
+                    catch (Exception ex)
+                    {
+                        LogHelper.WriteLog($"  报错信息：{ex.Message}");
+                    }
+                    sInKey = Console.ReadKey().KeyChar.ToString().ToLower();
+                } while (!sInKey.Equals("e"));
+            }
+            #endregion
+            #endregion
         }
     }
 }

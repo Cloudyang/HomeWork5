@@ -1,0 +1,56 @@
+﻿[
+  {
+    "DllName": "Fish",
+    "ClassName": "FifthModel.Fish",
+    "OutColor": 3,
+    "FoodName": "鱼",
+    "Amount": 100,
+    "Specification": "清蒸",
+    "EventList": [ "洗净", "加料", "蒸熟" ]
+  },
+  {
+    "DllName": "Vegatable",
+    "ClassName": "FifthModel.Vegatable",
+    "OutColor": 4,
+    "FoodName": "青菜",
+    "Amount": 30,
+    "Specification": "清炒",
+    "EventList": [ "洗净", "少量油", "加水" ]
+  },
+  {
+    "DllName": "TomatoScrambledEggs",
+    "ClassName": "FifthModel.TomatoScrambledEggs",
+    "OutColor": 5,
+    "FoodName": "番茄炒蛋",
+    "Amount": 30,
+    "Specification": "天然防晒霜",
+    "EventList": [ "洗净", "打蛋", "少量油", "翻炒" ]
+  },
+  {
+    "DllName": "Fish",
+    "ClassName": "FifthModel.Fish",
+    "OutColor": 6,
+    "FoodName": "带鱼",
+    "Amount": 100,
+    "Specification": "红烧",
+    "EventList": [ "洗净", "少量油", "加料", "翻炒" ]
+  },
+  {
+    "DllName": "Vegatable",
+    "ClassName": "FifthModel.Vegatable",
+    "OutColor": 7,
+    "FoodName": "小青菜",
+    "Amount": 30,
+    "Specification": "香辣",
+    "EventList": [ "洗净", "少量油", "加水" ]
+  },
+  {
+    "DllName": "TomatoScrambledEggs",
+    "ClassName": "FifthModel.TomatoScrambledEggs",
+    "OutColor": 8,
+    "FoodName": "港式炒蛋",
+    "Amount": 30,
+    "Specification": "港式做法",
+    "EventList": [ "洗净", "打蛋", "少量油", "翻炒" ]
+  }
+]

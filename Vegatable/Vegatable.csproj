@@ -1,20 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F55162FE-1A28-4CCD-BD6A-DE6D05A622FC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{5BFC3A6F-1524-4E10-B124-B92B52B4715C}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Homework5</RootNamespace>
-    <AssemblyName>Homework5</AssemblyName>
+    <RootNamespace>FifthModel</RootNamespace>
+    <AssemblyName>Vegatable</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,58 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
-    <Compile Include="OrderDishes.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Vegatable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="DishesCFG\Foods.Json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{ff143c46-8864-4a38-a5ae-7d3aa6ba0eba}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FirstModel\FirstModel.csproj">
-      <Project>{c855617c-7856-452c-8582-ead31fb9ca3d}</Project>
-      <Name>FirstModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Fish\Fish.csproj">
-      <Project>{38362b7d-7814-4596-9361-52780f51c142}</Project>
-      <Name>Fish</Name>
-    </ProjectReference>
     <ProjectReference Include="..\IModel\IModel.csproj">
       <Project>{870bbe08-387a-4326-8928-639bee9f588d}</Project>
       <Name>IModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SecondModel\SecondModel.csproj">
-      <Project>{c3388973-65ca-4250-9517-c12c4d13e6c8}</Project>
-      <Name>SecondModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThirdModel\ThirdModel.csproj">
-      <Project>{85fac760-9951-4548-b688-5b542162a038}</Project>
-      <Name>ThirdModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TomatoScrambledEggs\TomatoScrambledEggs.csproj">
-      <Project>{1d7e0746-b228-4a05-a8e1-d623343cdd7d}</Project>
-      <Name>TomatoScrambledEggs</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vegatable\Vegatable.csproj">
-      <Project>{5bfc3a6f-1524-4e10-b124-b92b52b4715c}</Project>
-      <Name>Vegatable</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
