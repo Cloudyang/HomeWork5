@@ -13,9 +13,12 @@ namespace FifthModel
         public override void Cook()
         {
             LogHelper.WriteLog($"{Name}开始做菜");
-            foreach (var item in base.EventList)
+            if (EventList != null)
             {
-                LogHelper.WriteLog($"{Name}:{item}", OutColor);
+                foreach (var item in EventList)
+                {
+                    LogHelper.WriteLog($"{Name}:{item}", OutColor);
+                }
             }
             LogHelper.WriteLog($"{Name}结束做菜");
         }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework5", "Homework5\Homework5.csproj", "{F55162FE-1A28-4CCD-BD6A-DE6D05A622FC}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FifthModel", "FifthModel", "{66A9AD2B-8414-4FDF-B4B1-79DB49BEC4EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fish", "Fish\Fish.csproj", "{38362B7D-7814-4596-9361-52780F51C142}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDecorator", "FoodDecorator\FoodDecorator.csproj", "{282D653C-6CF7-4C4A-86C0-D526EAEC2E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{38362B7D-7814-4596-9361-52780F51C142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38362B7D-7814-4596-9361-52780F51C142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38362B7D-7814-4596-9361-52780F51C142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282D653C-6CF7-4C4A-86C0-D526EAEC2E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282D653C-6CF7-4C4A-86C0-D526EAEC2E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282D653C-6CF7-4C4A-86C0-D526EAEC2E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282D653C-6CF7-4C4A-86C0-D526EAEC2E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

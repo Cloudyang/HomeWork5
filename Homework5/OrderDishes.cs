@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using IModel.Fifth;
 using Common;
+using FoodDecorator;
 
 namespace Homework5
 {
@@ -27,7 +28,18 @@ namespace Homework5
                 food.Specification = foodConfig.Specification;
                 food.EventList = foodConfig.EventList;
                 food.OutColor = foodConfig.OutColor;
-
+                #region 做菜前增加买菜、洗菜、切菜
+                food = new CutFood(food);
+                food = new WashFood(food);
+                food = new BuyFood(food);
+                #endregion
+                #region 做菜后增加摆盘、上菜
+                food = new DishFood(food);
+                food = new ServedFood(food);
+                #endregion
+                food.Name = foodConfig.FoodName;
+                food.Specification = foodConfig.Specification;
+                food.Amount = foodConfig.Amount;
                 Foods.Add(food);
             }
         }

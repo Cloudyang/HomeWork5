@@ -22,6 +22,9 @@
 设计代码：抽象的父类AbstractFood放在命名空间IModel.Fifth下，实现类放在解决方案FifthModel文件夹下,点菜系统通过OrderDishes类来实现。
 多线程演示：甲乙丙三个客人(三个线程)分别随机点5个菜，然后每个菜依次做菜、品尝、点评 详见Client类
 
-扩展要求 后续有时间再来扩展补充代码
-6  试着在5的基础上，为菜建立一个装饰器模式，装饰做菜方法
-主要原因之前用反射生成对象，再通过装饰器扩展，在类的定义上，我还需要好好在整理一下
+扩展要求 6  试着在5的基础上，为菜建立一个装饰器模式，装饰做菜方法
+设计代码：在IModel.Fifth下增加BaseFood类，装饰器实现类详见FoodDecorator类库，
+在点菜系统菜单选择后，已加入做菜前增加买菜、洗菜、切菜；做菜后增加摆盘、上菜；
+
+错误提示：“Homework5.Client”的类型初始值设定项引发异常。或者 “Homework5.OrderDishes”的类型初始值设定项引发异常。
+解决方案：请将TomatoScrambledEggs.dll、Vegatable.dll、 拷贝到Homework5\Homework5\bin\Debug目录下。

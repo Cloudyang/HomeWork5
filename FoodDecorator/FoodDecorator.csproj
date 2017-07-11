@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F55162FE-1A28-4CCD-BD6A-DE6D05A622FC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{282D653C-6CF7-4C4A-86C0-D526EAEC2E8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Homework5</RootNamespace>
-    <AssemblyName>Homework5</AssemblyName>
+    <RootNamespace>FoodDecorator</RootNamespace>
+    <AssemblyName>FoodDecorator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,44 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
-    <Compile Include="OrderDishes.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CutFood.cs" />
+    <Compile Include="DishFood.cs" />
+    <Compile Include="ServedFood.cs" />
+    <Compile Include="WashFood.cs" />
+    <Compile Include="BuyFood.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="DishesCFG\Foods.Json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{ff143c46-8864-4a38-a5ae-7d3aa6ba0eba}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FirstModel\FirstModel.csproj">
-      <Project>{c855617c-7856-452c-8582-ead31fb9ca3d}</Project>
-      <Name>FirstModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FoodDecorator\FoodDecorator.csproj">
-      <Project>{282d653c-6cf7-4c4a-86c0-d526eaec2e8a}</Project>
-      <Name>FoodDecorator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\IModel\IModel.csproj">
       <Project>{870bbe08-387a-4326-8928-639bee9f588d}</Project>
       <Name>IModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SecondModel\SecondModel.csproj">
-      <Project>{c3388973-65ca-4250-9517-c12c4d13e6c8}</Project>
-      <Name>SecondModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThirdModel\ThirdModel.csproj">
-      <Project>{85fac760-9951-4548-b688-5b542162a038}</Project>
-      <Name>ThirdModel</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

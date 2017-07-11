@@ -42,7 +42,7 @@ namespace Homework5
             var iMax = Score.Max(s => s.Value);
             var csf = Score.Where(s => s.Value == iMax)
                 .Select(o => o.Key);
-            LogHelper.WriteLog($"{string.Join(",", csf)}点评得分：{iMax}");
+            LogHelper.WriteLog($"{string.Join(",", csf)} 最高得分：{iMax}");
         }
 
         private string name;

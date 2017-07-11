@@ -38,7 +38,7 @@ namespace IModel.Fifth
         /// <summary>
         /// 品尝
         /// </summary>
-        public void Taste()
+        public virtual void Taste()
         {
             LogHelper.WriteLog($"开始品尝{Name}--{Specification}");
         }
