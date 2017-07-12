@@ -75,8 +75,10 @@ namespace Homework5
             #endregion
 
             #region 5  做个点菜系统，用户输入可选菜id进行点菜：
-            try {
-                #region 多线程演示：甲乙丙三个客人(三个线程)分别随机点5个菜，然后每个菜依次做菜、品尝、点评
+
+            #region 多线程演示：甲乙丙三个客人(三个线程)分别随机点5个菜，然后每个菜依次做菜、品尝、点评
+            try
+            {
                 Console.WriteLine("++++++++++++++++++++多线程演示：甲乙丙三个客人(三个线程)分别随机点5个菜，然后每个菜依次做菜、品尝、点评++");
                 {
                     List<Client> clients = new List<Client>();
@@ -91,19 +93,31 @@ namespace Homework5
 
                     Client.MaxScore();
                 }
-                #endregion
+            }
+            catch (AggregateException aex)
+            {
+                foreach (var ex in aex.InnerExceptions)
+                {
+                    LogHelper.WriteLog(ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteLog(ex.Message);
+            }
+            #endregion
 
-                #region 用户输入id点菜
+            #region 用户输入id点菜
+            try
+            {
                 Console.WriteLine("++++++++++++++++++++做个点菜系统，用户输入可选菜id进行点菜++++++++++++++++++++++++++++++++++++++++++++++");
                 {
                     OrderDishes od = new OrderDishes();
                     od.Show();
                     Console.WriteLine("按上述数字选择菜单，按e退出");
-
-                    string sInKey = Console.ReadKey().KeyChar.ToString().ToLower();
+                    string sInKey = Console.ReadLine();
                     do
                     {
-                        Console.WriteLine();
                         try
                         {
                             od.OrderDish(int.Parse(sInKey));
@@ -112,16 +126,17 @@ namespace Homework5
                         {
                             LogHelper.WriteLog($"  报错信息：{ex.Message}");
                         }
-                        sInKey = Console.ReadKey().KeyChar.ToString().ToLower();
-                    } while (!sInKey.Equals("e"));
+                        sInKey = Console.ReadLine();
+                    } while (!sInKey.Equals("e", StringComparison.OrdinalIgnoreCase));
                 }
-                #endregion
-                #endregion
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 LogHelper.WriteLog(ex.Message);
                 Console.ReadKey();
             }
+            #endregion
+            #endregion
         }
     }
 }
