@@ -27,4 +27,4 @@
 在点菜系统菜单选择后，已加入做菜前增加买菜、洗菜、切菜；做菜后增加摆盘、上菜；
 
 错误提示：“Homework5.Client”的类型初始值设定项引发异常。或者 “Homework5.OrderDishes”的类型初始值设定项引发异常。
-解决方案：请将TomatoScrambledEggs.dll、Vegatable.dll、 拷贝到Homework5\Homework5\bin\Debug目录下。
+解决方案：请将TomatoScrambledEggs.dll、Vegatable.dll、Fish.dll等实体类拷贝到Homework5\Homework5\bin\Debug目录下。
