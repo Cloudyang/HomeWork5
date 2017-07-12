@@ -37,9 +37,9 @@ namespace Homework5
                 food = new DishFood(food);
                 food = new ServedFood(food);
                 #endregion
-                food.Name = foodConfig.FoodName;
-                food.Specification = foodConfig.Specification;
-                food.Amount = foodConfig.Amount;
+                //food.Name = foodConfig.FoodName;
+                //food.Specification = foodConfig.Specification;
+                //food.Amount = foodConfig.Amount;
                 Foods.Add(food);
             }
         }

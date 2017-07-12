@@ -14,7 +14,7 @@ namespace FoodDecorator
 
         public override void Cook()
         {
-            LogHelper.WriteLog("买菜");
+            LogHelper.WriteLog($"{Name}:买菜");
             base.Cook();
         }
     }

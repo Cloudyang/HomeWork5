@@ -13,9 +13,13 @@ namespace IModel.Fifth
         public BaseFoodDecorator(AbstractFood food)
         {
             this.food = food;
+            base.Name = food.Name;
+            base.OutColor = food.OutColor;
+            base.Specification = food.Specification;
+            base.Amount = food.Amount;
         }
         public override void Cook()
-        {
+        { 
             food.Cook();
         }
     }
